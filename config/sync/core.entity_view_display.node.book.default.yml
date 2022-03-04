@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.book.field_description
     - field.field.node.book.field_isbn
     - node.type.book
   module:
@@ -12,6 +13,14 @@ targetEntityType: node
 bundle: book
 mode: default
 content:
+  field_description:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
   field_isbn:
     type: string
     label: above
