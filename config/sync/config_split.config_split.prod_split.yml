@@ -13,6 +13,7 @@ theme: {  }
 blacklist:
   - devel.settings
   - devel.toolbar.settings
+  - system.site
 graylist: {  }
 graylist_dependents: true
 graylist_skip_equal: true

@@ -1,0 +1,13 @@
+uuid: 23f4c108-ba39-4f13-a4c4-52010e9ff8f1
+langcode: en
+status: true
+dependencies:
+  module:
+    - plugin_for_featured_node
+_core:
+  default_config_hash: UChOoNJ3ZUDG3vmsmEcS6hWdQYdt2E3qHuKOAfJ92lk
+id: node_export_action
+label: 'Featured Node'
+type: node
+plugin: node_export_action
+configuration: {  }
