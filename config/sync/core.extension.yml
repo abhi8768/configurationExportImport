@@ -14,6 +14,7 @@ module:
   config: 0
   config_filter: 0
   config_ignore: 0
+  config_split: 0
   contact: 0
   contextual: 0
   datetime: 0
@@ -36,6 +37,7 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
+  plugin_for_featured_node: 0
   rdf: 0
   search: 0
   shortcut: 0
@@ -47,6 +49,7 @@ module:
   update: 0
   user: 0
   views_ui: 0
+  webform: 0
   views: 10
   standard: 1000
 theme:

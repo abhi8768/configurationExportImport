@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.book.field_description
+    - field.field.node.book.field_featured
     - field.field.node.book.field_isbn
     - node.type.book
   module:
@@ -20,6 +21,16 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 102
+    region: content
+  field_featured:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 103
     region: content
   field_isbn:
     type: string
