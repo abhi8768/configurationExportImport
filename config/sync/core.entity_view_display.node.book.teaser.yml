@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.book.field_description
+    - field.field.node.book.field_featured
     - field.field.node.book.field_isbn
     - node.type.book
   module:
@@ -21,4 +22,5 @@ content:
     region: content
 hidden:
   field_description: true
+  field_featured: true
   field_isbn: true

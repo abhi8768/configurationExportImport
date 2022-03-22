@@ -1,0 +1,30 @@
+uuid: 251da833-d55e-466f-9fff-4306d8cd66fc
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:3f1d5e68-bbea-47b7-bbd8-ce407414bb8a'
+  module:
+    - block_content
+    - system
+  theme:
+    - bartik
+id: customblockforsession4.3
+theme: bartik
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'block_content:3f1d5e68-bbea-47b7-bbd8-ce407414bb8a'
+settings:
+  id: 'block_content:3f1d5e68-bbea-47b7-bbd8-ce407414bb8a'
+  label: 'Custom block for Session 4.3 '
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
