@@ -15,17 +15,15 @@ use Drupal\node\Entity\Node;
  *   type = "node"
  * )
  */
-class ExportAction extends ActionBase
-{
-/**
- * Make nodes as featured node.
- *
- * @param object $node
- *   This veriable is node id.
- */
+class ExportAction extends ActionBase {
 
-  public function execute($node = NULL)
-  {
+  /**
+   * Make nodes as featured node.
+   *
+   * @param object $node
+   *   This veriable is node id.
+   */
+  public function execute($node = NULL) {
     if ($node) {
       $nid = $node->id();
       $node = Node::load($nid);
@@ -34,6 +32,7 @@ class ExportAction extends ActionBase
       \Drupal::messenger()->addStatus('The node is featured.');
     }
   }
+
   /**
    * Access the nodes.
    *
@@ -47,11 +46,8 @@ class ExportAction extends ActionBase
    * @return object
    *   Return as object type.
    */
-
-  public function access($object, AccountInterface $account = NULL, $return_as_object = FALSE)
-  {
+  public function access($object, AccountInterface $account = NULL, $return_as_object = FALSE) {
     $result = $object->access('create', $account, TRUE);
     return $return_as_object ? $result : $result->isAllowed();
   }
-
 }
