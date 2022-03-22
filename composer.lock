@@ -1489,6 +1489,7 @@
                 "configuration management"
             ],
             "support": {
+
                 "source": "https://git.drupalcode.org/project/config_split",
                 "issues": "https://www.drupal.org/project/issues/config_split",
                 "slack": "https://drupal.slack.com/archives/C45342CDD"
