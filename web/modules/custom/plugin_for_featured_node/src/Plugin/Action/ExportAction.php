@@ -15,12 +15,17 @@ use Drupal\node\Entity\Node;
  *   type = "node"
  * )
  */
-class ExportAction extends ActionBase {
+class ExportAction extends ActionBase
+{
+/**
+ * Make nodes as featured node.
+ *
+ * @param object $node
+ *   This veriable is node id.
+ */
 
-  /**
-   * {@inheritdoc}
-   */
-  public function execute($node = NULL) {
+  public function execute($node = NULL)
+  {
     if ($node) {
       $nid = $node->id();
       $node = Node::load($nid);
@@ -29,13 +34,22 @@ class ExportAction extends ActionBase {
       \Drupal::messenger()->addStatus('The node is featured.');
     }
   }
-
   /**
-   * {@inheritdoc}
+   * Access the nodes.
+   *
+   * @param object $object
+   *   Object type.
+   * @param \Drupal\Core\Form\AccountInterface $account
+   *   It will retrive the value.
+   * @param bool $return_as_object
+   *   Object type.
+   *
+   * @return object
+   *   Return as object type.
    */
-  public function access($object, AccountInterface $account = NULL, $return_as_object = FALSE) {
-    /** @var \Drupal\node\NodeInterface $object */
-    // TODO: write here your permissions
+
+  public function access($object, AccountInterface $account = NULL, $return_as_object = FALSE)
+  {
     $result = $object->access('create', $account, TRUE);
     return $return_as_object ? $result : $result->isAllowed();
   }
