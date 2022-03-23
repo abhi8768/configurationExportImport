@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * File to update the content and import the config using update_hook.
+ */
+
+/**
+ * Function to create the block with the content.
+ */
+function customblock_update_9001() {
+  $uuid = '3f1d5e68-bbea-47b7-bbd8-ce407414bb8a';
+  $block = \Drupal::entityManager()->loadEntityByUuid('block_content', $uuid);
+  if (empty($block)) {
+    $block = \Drupal\block_content\Entity\BlockContent::create([
+      // Block title.
+      'info' => 'Custom block for Session 4.3',
+      // Block bundle.
+      'type' => 'basic',
+      'uuid' => '3f1d5e68-bbea-47b7-bbd8-ce407414bb8a',
+      'body' => [
+        'value' => 'This is test custom block',
+        'format' => 'full_html',
+      ],
+    ]);
+    $block->save();
+  }
+}
