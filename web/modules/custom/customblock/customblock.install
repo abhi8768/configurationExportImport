@@ -4,12 +4,15 @@
  * File to update the content and import the config using update_hook.
  */
 
+use Drupal\Core\Config\FileStorage;
+
 /**
  * Function to create the block with the content.
  */
 function customblock_update_9001() {
   $uuid = '3f1d5e68-bbea-47b7-bbd8-ce407414bb8a';
-  $block = \Drupal::entityManager()->loadEntityByUuid('block_content', $uuid);
+  $entity_repository = \Drupal::service('entity.repository');
+  $block = $entity_repository->loadEntityByUuid('block_content', $uuid);
   if (empty($block)) {
     $block = \Drupal\block_content\Entity\BlockContent::create([
       // Block title.
@@ -24,4 +27,20 @@ function customblock_update_9001() {
     ]);
     $block->save();
   }
+}
+
+/**
+ * Function to import the field of book content type using update hook.
+ *
+ * @return void
+ */
+function customblock_update_9301() {
+  $config_path = realpath('../config/sync');
+  $source = new FileStorage($config_path);
+  \Drupal::entityTypeManager()->getStorage('field_storage_config')
+    ->create($source->read('field.storage.node.field_author'))
+    ->save();
+  \Drupal::entityTypeManager()->getStorage('field_config')
+    ->create($source->read('field.field.node.book.field_author'))
+    ->save();
 }
