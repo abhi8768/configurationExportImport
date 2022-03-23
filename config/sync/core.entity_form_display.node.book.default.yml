@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.book.field_author
     - field.field.node.book.field_description
     - field.field.node.book.field_featured
     - field.field.node.book.field_isbn
@@ -19,6 +20,14 @@ content:
     weight: 10
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_author:
+    type: string_textfield
+    weight: 124
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_description:
     type: string_textfield
