@@ -1,0 +1,10 @@
+name: Custom module for Theme Assets
+description: This module for implement assets css and js in custom theme
+type: module
+core: 8.x
+core_version_requirement: ^8 || ^9
+libraries:
+  - themeattachassets/global-styling
+  - themeattachassets/global-scripts
+dependencies:
+  - drupal:block
