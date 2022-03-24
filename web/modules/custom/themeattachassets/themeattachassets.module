@@ -1,0 +1,4 @@
+<?php
+function themeattachassets_preprocess_page(&$variables) {
+  $variables['#attached']['library'][] = 'themeattachassets/global-styling';
+}
