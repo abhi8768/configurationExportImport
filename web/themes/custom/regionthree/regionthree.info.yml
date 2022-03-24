@@ -1,0 +1,11 @@
+name: Region Three
+type: theme
+description: 'Basic practice for drupal theming.'
+core_version_requirement: ^8 || ^9
+libraries:
+  - regionthree/global-styling
+base theme: stable
+regions:
+  sidebar_first: 'Left sidebar'
+  content: 'Content'
+  sidebar_second: 'Right sidebar'
