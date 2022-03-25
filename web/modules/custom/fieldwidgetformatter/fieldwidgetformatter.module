@@ -1,0 +1,4 @@
+<?php
+function fieldwidgetformatter_preprocess_page(&$variables) {
+  $variables['#attached']['library'][] = 'fieldwidgetformatter/global-styling';
+}
