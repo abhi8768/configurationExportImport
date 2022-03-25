@@ -1,0 +1,7 @@
+name: Field Widget Formatter Module
+description: Session 5.2 - Custom Field Type, Field Widget, Field Formatter
+type: module
+core: 8.x
+core_version_requirement: ^8 || ^9
+libraries:
+  - fieldwidgetformatter/global-styling
